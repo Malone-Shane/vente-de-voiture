@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoVente - Vente de Voitures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🚗 AutoVente</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#voitures">Nos Voitures</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h2>Trouvez la voiture de vos rêves</h2>
+            <p>Large sélection de véhicules neufs et d'occasion</p>
+            <button class="btn-primary" onclick="scrollToSection('voitures')">Voir nos véhicules</button>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="filters">
+        <div class="container">
+            <h3>Rechercher votre voiture</h3>
+            <div class="filter-group">
+                <select id="marque-filter">
+                    <option value="">Toutes les marques</option>
+                    <option value="peugeot">Peugeot</option>
+                    <option value="renault">Renault</option>
+                    <option value="citroen">Citroën</option>
+                    <option value="volkswagen">Volkswagen</option>
+                </select>
+                <select id="prix-filter">
+                    <option value="">Tous les prix</option>
+                    <option value="0-10000">0 - 10 000€</option>
+                    <option value="10000-20000">10 000 - 20 000€</option>
+                    <option value="20000-30000">20 000 - 30 000€</option>
+                    <option value="30000+">30 000€+</option>
+                </select>
+                <button class="btn-secondary" onclick="filterCars()">Rechercher</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Liste des Voitures -->
+    <section id="voitures" class="cars-section">
+        <div class="container">
+            <h2>Nos Véhicules Disponibles</h2>
+            <div id="cars-grid" class="cars-grid">
+                <!-- Les voitures seront ajoutées dynamiquement par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🔍</span>
+                    <h3>Inspection Complète</h3>
+                    <p>Tous nos véhicules sont inspectés en détail</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">💰</span>
+                    <h3>Financement</h3>
+                    <p>Solutions de financement adaptées</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🛡️</span>
+                    <h3>Garantie</h3>
+                    <p>Garantie sur tous nos véhicules</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🔧</span>
+                    <h3>Entretien</h3>
+                    <p>Service après-vente de qualité</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="nom" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="telephone" placeholder="Votre téléphone">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AutoVente. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal pour les détails de voiture -->
+    <div id="car-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
