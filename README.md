@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚗 AutoVente - Site de Vente de Voitures
 
 Un site web moderne et responsive pour la vente de voitures, développé en HTML, CSS et JavaScript pur.
@@ -110,3 +111,6 @@ Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou un
 ---
 
 Fait avec ❤️ pour les passionnés d'automobile
+=======
+# vente-de-voiture
+>>>>>>> 50a87914b6a07cb6a72801c07760606f0881cba9
