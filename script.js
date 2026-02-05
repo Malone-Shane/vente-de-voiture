@@ -10,7 +10,7 @@ const carsData = [
         carburant: "Essence",
         transmission: "Manuelle",
         description: "Berline compacte en excellent état, révision récente",
-        icon: "🚙"
+       image: "images/308.jpg"
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const carsData = [
         carburant: "Diesel",
         transmission: "Automatique",
         description: "Citadine économique, parfaite pour la ville",
-        icon: "🚗"
+       image: "images/Renault.jpg"
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ const carsData = [
         carburant: "Essence",
         transmission: "Manuelle",
         description: "Voiture polyvalente et confortable",
-        icon: "🚕"
+       image : "images/c3.jpg"
     },
     {
         id: 4,
@@ -46,7 +46,7 @@ const carsData = [
         carburant: "Hybride",
         transmission: "Automatique",
         description: "Compacte premium avec technologie hybride",
-        icon: "🚙"
+       image : "images/golf.jpg"
     },
     {
         id: 5,
@@ -58,7 +58,7 @@ const carsData = [
         carburant: "Diesel",
         transmission: "Automatique",
         description: "SUV spacieux et moderne, excellent équipement",
-        icon: "🚐"
+        image: "images/3008.jpg"
     },
     {
         id: 6,
@@ -70,7 +70,7 @@ const carsData = [
         carburant: "Essence",
         transmission: "Manuelle",
         description: "SUV urbain élégant et pratique",
-        icon: "🚙"
+       image: "images/captur.jpg"
     }
 ];
 
@@ -105,7 +105,9 @@ function createCarCard(car) {
     card.onclick = () => showCarDetails(car);
 
     card.innerHTML = `
-        <div class="car-image">${car.icon}</div>
+       <div class="car-image">
+            <img src="${car.image}" alt="${car.modele}">
+        </div>
         <div class="car-info">
             <h3>${car.modele}</h3>
             <p class="car-details">📅 Année: ${car.annee}</p>
@@ -151,7 +153,9 @@ function showCarDetails(car) {
 
     modalBody.innerHTML = `
         <div style="text-align: center;">
-            <div style="font-size: 5rem; margin-bottom: 1rem;">${car.icon}</div>
+        <div class="modal-image">
+            <img src="${car.image}" alt="${car.modele}">
+        </div>   
             <h2>${car.modele}</h2>
             <p style="color: #e74c3c; font-size: 2rem; font-weight: bold; margin: 1rem 0;">
                 ${car.prix.toLocaleString('fr-FR')} €
